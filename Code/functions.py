@@ -58,7 +58,9 @@ class PortfolioAnalyzer:
     def stock_data(self, ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
         """Fetch stock data from Yahoo Finance"""
         try:
-            ticker_symbol = f"{ticker}.NS"  # Add .NS suffix for NSE stocks
+
+            # INDIAN STOCKS adding NS
+            ticker_symbol = f"{ticker}.NS"  
             
             stock_data = yf.download(
                 ticker_symbol,
